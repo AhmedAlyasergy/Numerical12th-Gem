@@ -1,12 +1,22 @@
 """
-Numerical Methods Engine Module
+Engine Package - Core Numerical Methods Implementations
 
-Provides implementations of various numerical methods for root finding
-and system solving with detailed step-by-step execution tracking.
+Provides abstract base solver and concrete implementations of:
+- Bisection Method
+- Secant Method
+- Gauss-Seidel Method
 """
 
+from .base_solver import BaseSolver, SolverResult, SolverStep
 from .bisection import BisectionMethod
 from .secant import SecantMethod
 from .gauss_seidel import GaussSeidelMethod
 
-__all__ = ["BisectionMethod", "SecantMethod", "GaussSeidelMethod"]
+__all__ = [
+    'BaseSolver',
+    'SolverResult',
+    'SolverStep',
+    'BisectionMethod',
+    'SecantMethod',
+    'GaussSeidelMethod'
+]
